@@ -1,3 +1,3 @@
 # JogoDaVelhaUnity5
 
-Este é um jogo da velha feito Unity 5 sob a licença GPLv3 [Link](http://www.gnu.org/licenses/gpl-3.0.txt)
+Este é um jogo da velha feito Unity 5 sob a licença Apache v2 [Link](http://www.apache.org/licenses/LICENSE-2.0.html "Apache 2")

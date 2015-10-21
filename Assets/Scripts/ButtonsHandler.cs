@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ButtonsHandler : MonoBehaviour {
 
@@ -42,7 +41,7 @@ public class ButtonsHandler : MonoBehaviour {
 			
 			if(matchEnded){
 				endMatch.isRunning = false;
-				currentPlayerText.enabled = false;
+				currentPlayerText.gameObject.SetActive(false);
 				endMatch.endGameText.text = "DRAW!";
 			}
 		}

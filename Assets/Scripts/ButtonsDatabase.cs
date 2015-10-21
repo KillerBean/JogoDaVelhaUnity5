@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ButtonsDatabase : MonoBehaviour {
 	public Image button1Image;

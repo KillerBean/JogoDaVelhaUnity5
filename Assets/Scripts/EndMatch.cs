@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class EndMatch : MonoBehaviour {
 	public ButtonsDatabase buttonsDatabase;
@@ -186,34 +185,28 @@ public class EndMatch : MonoBehaviour {
 		}
 
 		if(!isRunning){
-			buttonAgain.enabled = true;
-			buttonAgain.image.enabled = true;
-			buttonBackToMenu.enabled = true;
-			buttonBackToMenu.image.enabled = true;
-			endGameText.enabled = true;
-			imageAtEnd.enabled = true;
-			buttonResetScore.enabled = true;
-			buttonResetScore.image.enabled = true;
-			textResetScore.enabled = true;
-			textPlayAgain.enabled = true;
-			textBackToMenu.enabled = true;
-		}else{
-			endGameText.enabled = false;
-			buttonAgain.enabled = false;
-			buttonAgain.image.enabled = false;
-			buttonBackToMenu.enabled = false;
-			buttonBackToMenu.image.enabled = false;
-			imageAtEnd.enabled = false;
-			buttonResetScore.enabled = false;
-			buttonResetScore.image.enabled = false;
-			textResetScore.enabled = false;
-			textPlayAgain.enabled = false;
-			textBackToMenu.enabled = false;
-			//if(buttonsHandler.matchEnded){
-			//	buttonsHandler.canEndMatch = false;
-			//	buttonsHandler.matchEnded = false;
-			//}
-		}
+            endGameText.gameObject.SetActive(true);
+            buttonAgain.gameObject.SetActive(true);
+            buttonBackToMenu.gameObject.SetActive(true);
+            imageAtEnd.gameObject.SetActive(true);
+            buttonResetScore.gameObject.SetActive(true);
+            textResetScore.gameObject.SetActive(true);
+            textPlayAgain.gameObject.SetActive(true);
+            textBackToMenu.gameObject.SetActive(true);
+            buttonsHandler.currentPlayerText.gameObject.SetActive(false);
+        }
+        else{
+            endGameText.gameObject.SetActive(false);
+            buttonAgain.gameObject.SetActive(false);
+            buttonBackToMenu.gameObject.SetActive(false);
+            imageAtEnd.gameObject.SetActive(false);
+            buttonResetScore.gameObject.SetActive(false);
+            textResetScore.gameObject.SetActive(false);
+            textPlayAgain.gameObject.SetActive(false);
+            textBackToMenu.gameObject.SetActive(false);
+            buttonsHandler.currentPlayerText.gameObject.SetActive(true);
+            //}
+        }
 	}
 
 }

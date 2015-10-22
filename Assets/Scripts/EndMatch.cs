@@ -37,154 +37,196 @@ public class EndMatch : MonoBehaviour {
 	void Update () {
 		buttonsHandler.delayToEnd();
 
+        UpdateBoard();
 
-		 if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+        InGame();
 
-		}else if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button4Image.sprite == buttonsHandler.imageX && buttonsDatabase.button7Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+	}
 
-		}else if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button2Image.sprite == buttonsHandler.imageX && buttonsDatabase.button3Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+    public void UpdateBoard()
+    {
+        if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button4Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button6Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button7Image.sprite == buttonsHandler.imageX && buttonsDatabase.button8Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+        }
+        else if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button4Image.sprite == buttonsHandler.imageX && buttonsDatabase.button7Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button7Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button3Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button2Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button8Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+        }
+        else if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageX && buttonsDatabase.button2Image.sprite == buttonsHandler.imageX && buttonsDatabase.button3Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button3Image.sprite == buttonsHandler.imageX && buttonsDatabase.button6Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player1Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+        }
+        else if (buttonsDatabase.button4Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button6Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button4Image.sprite == buttonsHandler.imageO && buttonsDatabase.button7Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button2Image.sprite == buttonsHandler.imageO && buttonsDatabase.button3Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+        }
+        else if (buttonsDatabase.button7Image.sprite == buttonsHandler.imageX && buttonsDatabase.button8Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button4Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button6Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button7Image.sprite == buttonsHandler.imageO && buttonsDatabase.button8Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+        }
+        else if (buttonsDatabase.button7Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button3Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button7Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button3Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}else if(buttonsDatabase.button2Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button8Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+        }
+        else if (buttonsDatabase.button2Image.sprite == buttonsHandler.imageX && buttonsDatabase.button5Image.sprite == buttonsHandler.imageX && buttonsDatabase.button8Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		}else if(buttonsDatabase.button3Image.sprite == buttonsHandler.imageO && buttonsDatabase.button6Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
-		{
-			buttonsHandler.canEndMatch = true;
-			
-			if(buttonsHandler.matchEnded){
-				isRunning = false;
-				player2Win = true;
-			}
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
 
-		}
+        }
+        else if (buttonsDatabase.button3Image.sprite == buttonsHandler.imageX && buttonsDatabase.button6Image.sprite == buttonsHandler.imageX && buttonsDatabase.button9Image.sprite == buttonsHandler.imageX)
+        {
+            buttonsHandler.canEndMatch = true;
 
-		if(!isRunning){
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player1Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button4Image.sprite == buttonsHandler.imageO && buttonsDatabase.button7Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button1Image.sprite == buttonsHandler.imageO && buttonsDatabase.button2Image.sprite == buttonsHandler.imageO && buttonsDatabase.button3Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button4Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button6Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button7Image.sprite == buttonsHandler.imageO && buttonsDatabase.button8Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button7Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button3Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button2Image.sprite == buttonsHandler.imageO && buttonsDatabase.button5Image.sprite == buttonsHandler.imageO && buttonsDatabase.button8Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+        else if (buttonsDatabase.button3Image.sprite == buttonsHandler.imageO && buttonsDatabase.button6Image.sprite == buttonsHandler.imageO && buttonsDatabase.button9Image.sprite == buttonsHandler.imageO)
+        {
+            buttonsHandler.canEndMatch = true;
+
+            if (buttonsHandler.matchEnded)
+            {
+                isRunning = false;
+                player2Win = true;
+            }
+
+        }
+    }
+
+    public void InGame()
+    {
+        if (!isRunning)
+        {
             endGameText.gameObject.SetActive(true);
             buttonAgain.gameObject.SetActive(true);
             buttonBackToMenu.gameObject.SetActive(true);
@@ -195,7 +237,8 @@ public class EndMatch : MonoBehaviour {
             textBackToMenu.gameObject.SetActive(true);
             buttonsHandler.currentPlayerText.gameObject.SetActive(false);
         }
-        else{
+        else
+        {
             endGameText.gameObject.SetActive(false);
             buttonAgain.gameObject.SetActive(false);
             buttonBackToMenu.gameObject.SetActive(false);
@@ -205,8 +248,6 @@ public class EndMatch : MonoBehaviour {
             textPlayAgain.gameObject.SetActive(false);
             textBackToMenu.gameObject.SetActive(false);
             buttonsHandler.currentPlayerText.gameObject.SetActive(true);
-            //}
         }
-	}
-
+    }
 }

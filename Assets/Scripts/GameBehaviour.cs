@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour {
 
@@ -11,9 +12,10 @@ public class GameBehaviour : MonoBehaviour {
 	}
 
 	public void NewGame(){
-		Application.LoadLevel("Scene");
+        //Application.LoadLevel("Scene");
+        SceneManager.LoadScene("Scene");
 
-	}
+    }
 
 	public void CloseGame(){
 #if UNITY_EDITOR

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonsHandler : MonoBehaviour {
 
@@ -15,7 +16,8 @@ public class ButtonsHandler : MonoBehaviour {
 	public int numberPlays;
 	public bool matchEnded = false;
 	public bool canEndMatch =  false;
-	public float timeMaxToEnd = 0.5f;
+    public bool conditionToEnd = false;
+    public float timeMaxToEnd = 0.5f;
 	public float timeToEnd = 0;
 
 	// Use this for initialization
@@ -58,20 +60,24 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button1Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
 			}else if(buttonsDatabase.button4Image.sprite == imageX && buttonsDatabase.button7Image.sprite == imageX)
 			{
 				buttonsDatabase.button1Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
 			{
 				buttonsDatabase.button1Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
-				
-			}
+                conditionToEnd = true;
+
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -84,20 +90,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button1Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
 			{
 				buttonsDatabase.button1Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
-				
-			}else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
+                conditionToEnd = true;
+
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
 			{
 				buttonsDatabase.button1Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
-				
-			}
+                conditionToEnd = true;
+
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -114,14 +125,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button2Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
 			{
 				buttonsDatabase.button2Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -134,14 +148,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button2Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
 			{
 				buttonsDatabase.button2Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -158,20 +175,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button3Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button6Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button6Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
 			{
 				buttonsDatabase.button3Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button7Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button7Image.sprite == imageX)
 			{
 				buttonsDatabase.button3Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -184,20 +206,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button3Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button6Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button6Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
 			{
 				buttonsDatabase.button3Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
 			{
 				buttonsDatabase.button3Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -214,14 +241,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button4Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
 			{
 				buttonsDatabase.button4Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -234,14 +264,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button4Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
 			{
 				buttonsDatabase.button4Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -258,26 +291,33 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button5Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button3Image.sprite == imageX && buttonsDatabase.button7Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button3Image.sprite == imageX && buttonsDatabase.button7Image.sprite == imageX)
 			{
 				buttonsDatabase.button5Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button4Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button4Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
 			{
 				buttonsDatabase.button5Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button2Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button2Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
 			{
 				buttonsDatabase.button5Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -290,26 +330,33 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button5Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button3Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button3Image.sprite == imageO && buttonsDatabase.button7Image.sprite == imageO)
 			{
 				buttonsDatabase.button5Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
 			{
 				buttonsDatabase.button5Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button2Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button2Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
 			{
 				buttonsDatabase.button5Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 		}
@@ -325,14 +372,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button6Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button4Image.sprite == imageX && buttonsDatabase.button5Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button4Image.sprite == imageX && buttonsDatabase.button5Image.sprite == imageX)
 			{
 				buttonsDatabase.button6Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -345,15 +395,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button6Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-
-			}else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button5Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button4Image.sprite == imageO && buttonsDatabase.button5Image.sprite == imageO)
 			{
 				buttonsDatabase.button6Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -370,20 +422,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button7Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button8Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button8Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
 			{
 				buttonsDatabase.button7Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button3Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageX && buttonsDatabase.button3Image.sprite == imageX)
 			{
 				buttonsDatabase.button7Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -396,20 +453,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button7Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button8Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button8Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
 			{
 				buttonsDatabase.button7Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button3Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button5Image.sprite == imageO && buttonsDatabase.button3Image.sprite == imageO)
 			{
 				buttonsDatabase.button7Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -426,14 +488,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button8Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button7Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button7Image.sprite == imageX && buttonsDatabase.button9Image.sprite == imageX)
 			{
 				buttonsDatabase.button8Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -446,14 +511,17 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button8Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button7Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button7Image.sprite == imageO && buttonsDatabase.button9Image.sprite == imageO)
 			{
 				buttonsDatabase.button8Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -470,20 +538,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button9Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button3Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button3Image.sprite == imageX && buttonsDatabase.button6Image.sprite == imageX)
 			{
 				buttonsDatabase.button9Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button7Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
+            }
+            else if(buttonsDatabase.button7Image.sprite == imageX && buttonsDatabase.button8Image.sprite == imageX)
 			{
 				buttonsDatabase.button9Image.sprite = imageX;
 				endMatch.endGameText.text = "Player 1 WIN!";
 				ScoreScript.scoreXInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 2;
 			numberPlays++;
 
@@ -496,20 +569,25 @@ public class ButtonsHandler : MonoBehaviour {
 				buttonsDatabase.button9Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button3Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button3Image.sprite == imageO && buttonsDatabase.button6Image.sprite == imageO)
 			{
 				buttonsDatabase.button9Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}else if(buttonsDatabase.button7Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
+            }
+            else if(buttonsDatabase.button7Image.sprite == imageO && buttonsDatabase.button8Image.sprite == imageO)
 			{
 				buttonsDatabase.button9Image.sprite = imageO;
 				endMatch.endGameText.text = "Player 2 WIN!";
 				ScoreScript.scoreOInt += 1;
+                conditionToEnd = true;
 
-			}
+            }
 			playerID = 1;
 			numberPlays++;
 
@@ -536,11 +614,15 @@ public class ButtonsHandler : MonoBehaviour {
 	}
 
 	public void  backToMenu(){
-		Application.LoadLevel("Menu");
-	}
+		//Application.LoadLevel("Menu");
+        SceneManager.LoadScene("Menu");
+
+    }
 
 	public void reloadGameScene(){
-		Application.LoadLevel("Scene");
-	}
+		//Application.LoadLevel("Scene");
+        SceneManager.LoadScene("Scene");
+
+    }
 	
 }
